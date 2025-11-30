@@ -1,0 +1,10 @@
+{
+    "dataset_path": "C:\\Users\\bikas\\OneDrive\\Desktop\\DataSage-prototype\\data\\heart.csv",
+    "target": "target",
+    "model_metadata": {
+        "target": "target",
+        "accuracy": 0.8852459016393442,
+        "model_file": "artifacts/models/model.pkl"
+    },
+    "_last_search_summary": "In machine learning and optimal control, reinforcement learning (RL) is concerned with how an intelligent agent should take actions in a dynamic environment in order to maximize a reward signal. Reinforcement learning is one of the three basic machine learning paradigms, alongside supervised learning and unsupervised learning . While supervised learning and unsupervised learning algorithms ..."
+}

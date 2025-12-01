@@ -32,7 +32,6 @@ You can talk to DataSage like talking to an assistant:
 - show feature importance
 - search what is reinforcement learning
 
-
 No coding needed — the agent interprets the intent and triggers the correct tools.
 
 ---
@@ -68,10 +67,9 @@ Automatically generates:
 
 All saved to: eda
 
-
 ---
 
-### 🤖 **Model Training & Comparison**
+### 🤖 **5. Model Training & Comparison**
 The `trainer_agent` trains 4 ML models:
 - Logistic Regression  
 - SVM (RBF)  
@@ -80,10 +78,9 @@ The `trainer_agent` trains 4 ML models:
 
 Automatically selects the **best-performing model** and saves:artifacts/models/model.pkl
 
-
 ---
 
-### 📈 **Feature Importance**
+### 📈 **6. Feature Importance**
 Based on the selected model, DataSage shows:
 - Ranked feature importances  
 - Human-readable display  
@@ -93,10 +90,9 @@ Glucose : 1.08
 BMI : 0.77
 Age : 0.43
 
-
 ---
 
-### 🌍 **Real-Time Internet Search**
+### 🌍 **7. Real-Time Internet Search**
 The `search_agent` performs:
 - Live search  
 - Multi-source summary  
@@ -107,77 +103,83 @@ The `search_agent` performs:
 ### 🧠 **Session Memory**
 Saved automatically inside:artifacts/session_memory.json
 
-
-Memory includes:
-- Last dataset loaded  
+Includes:
+- Last dataset  
 - Target column  
-- Best model accuracy & path  
-- Last search query summary  
+- Best model & accuracy  
+- Last search query  
 
-Loaded automatically when the app starts.
+Loaded automatically on startup.
 
 ---
 
 # 🧱 Project Structure  
----
+
+```text
 DATASAGE-PROTOTYPE/
 │
 ├── agents/
-│ ├── init.py
-│ ├── intent.py
-│ ├── data_agent.py
-│ ├── cleaning.py
-│ ├── eda.py
-│ ├── trainer.py
-│ ├── predictor.py
-│ ├── search_agent.py
-│ └── utils.py
+│   ├── __init__.py
+│   ├── intent.py
+│   ├── data_agent.py
+│   ├── cleaning.py
+│   ├── eda.py
+│   ├── trainer.py
+│   ├── predictor.py
+│   ├── search_agent.py
+│   └── utils.py
 │
 ├── artifacts/
-│ ├── eda/
-│ ├── models/
-│ ├── class_balance_Outcome.png
-│ ├── class_balance_target.png
-│ ├── correlation_matrix.png
-│ ├── preview.csv
-│ └── session_memory.json
+│   ├── eda/
+│   ├── models/
+│   ├── class_balance_Outcome.png
+│   ├── class_balance_target.png
+│   ├── correlation_matrix.png
+│   ├── preview.csv
+│   └── session_memory.json
 │
 ├── data/
-│ ├── diabetes.csv
-│ ├── heart.csv
-│ └── parkinsons.csv
+│   ├── diabetes.csv
+│   ├── heart.csv
+│   └── parkinsons.csv
 │
 ├── models/
-│ └── random_forest.pkl
+│   └── random_forest.pkl
 │
-├── venv/ # virtual environment
+├── venv/   # virtual environment
 │
-├── prototype.py # main entry point
+├── prototype.py   # main entry point
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+```
 
 ---
 
 # 🚀 Getting Started
 
-### 1️⃣ Clone the repository  
-git clone <your_repo_url>
+### 1️⃣ Clone the repository
+```
+git clone https://github.com/bikash-kumar-dev/Datasage
 cd DATASAGE-PROTOTYPE
-
-makefile
-Copy code
+```
 
 ### 2️⃣ Create & activate virtual environment  
 Windows:
+```
 python -m venv venv
 venv\Scripts\activate
+```
 
-### 3️⃣ Install dependencies  
+### 3️⃣ Install dependencies
+```
 pip install -r requirements.txt
+```
 
-### 4️⃣ Run DataSage  
+### 4️⃣ Run DataSage 
+```
 python prototype.py
+```
 
 ---
 
@@ -205,7 +207,6 @@ User > show memory
 
 User > search what is reinforcement learning
 [Internet search results]
-
 
 ---
 

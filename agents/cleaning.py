@@ -9,7 +9,7 @@ class CleaningAgent:
         info("Starting interactive data cleaning...")
 
         # ====================================================
-        # 1️⃣ Missing Values
+        # 1.Missing Values
         # ====================================================
         missing = df.isnull().sum()
 
@@ -43,7 +43,7 @@ class CleaningAgent:
             success("No missing values found.")
 
         # ====================================================
-        # 2️⃣ Remove Duplicates
+        # 2️. Remove Duplicates
         # ====================================================
         duplicates = df.duplicated().sum()
         if duplicates > 0:
@@ -58,7 +58,7 @@ class CleaningAgent:
             success("No duplicates found.")
 
         # ====================================================
-        # 3️⃣ Constant Columns
+        # 3️. Constant Columns
         # ====================================================
         constant_cols = [c for c in df.columns if df[c].nunique() == 1]
 
@@ -79,7 +79,7 @@ class CleaningAgent:
             success("No constant columns found.")
 
         # ====================================================
-        # 4️⃣ Outliers (optional)
+        # 4️. Outliers (optional)
         # ====================================================
         choice = input("\nDetect & cap outliers (IQR)? (yes/no): ").strip().lower()
         if choice == "yes":

@@ -9,7 +9,7 @@ from agents.cleaning import CleaningAgent
 from agents.eda import EDAAgent
 from agents.trainer import TrainerAgent
 from agents.predictor import PredictorAgent
-from agents.search_agent import SearchAgent   # <-- NEW
+from agents.search_agent import SearchAgent   # <-- New feature of DataSage
 
 # Utils
 from agents.utils import (
@@ -28,7 +28,7 @@ class DataSage:
         self.eda_agent = EDAAgent()
         self.trainer_agent = TrainerAgent()
         self.predictor_agent = PredictorAgent()
-        self.search_agent = SearchAgent()      # <-- NEW
+        self.search_agent = SearchAgent()      # <-- Search Agent initialization
 
         self.intent_classifier = IntentClassifier()
         self.memory = load_memory()
